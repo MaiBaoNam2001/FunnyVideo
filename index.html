@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>QR Code</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        #image>img {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>QR Code</h1>
+        <div id="image"></div>
+    </div>
+    <script>
+        var image = new QRCode("image", {
+            text: "funny.html",
+            width: 200,
+            height: 200,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+    </script>
+</body>
+
+</html>
